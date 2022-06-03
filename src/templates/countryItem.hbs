@@ -1,0 +1,14 @@
+<li class='country-item'>
+  {{#each name}}
+
+    <img
+      class='country-flag'
+      src='{{flags.svg}}'
+      alt='{{name.common}}'
+      width='100'
+      height='100%'
+    />
+    <h2 class='country-title'>{{name.official}}</h2>
+  {{/each}}
+
+</li>
