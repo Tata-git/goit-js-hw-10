@@ -17,7 +17,6 @@ function renderCountryList(names) {
 }
 
 function renderCountryInfo(names) {
-  // const markup = countryCharacteristics(names);
   const markup = names
     .map(({ name, flags, capital, population, languages }) => {
       return `<div class='card'>
