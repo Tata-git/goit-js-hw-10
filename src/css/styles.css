@@ -25,9 +25,23 @@ body {
 .country-item {
   display: flex;
   align-items: center;
-
 }
 .country-title {
   font-size: 20px;
   margin-left: 10px;
 }
+.country-item-top {
+  display: flex;
+  align-items: center;
+}
+.card-text {
+  font-weight: 700;
+}
+
+.card-t {
+  font-weight: 400;
+}
+
+
+
+
