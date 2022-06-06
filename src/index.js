@@ -21,11 +21,11 @@ function inputInformation(evt) {
     .then(makeResponseRequest)
     .catch(error => {
       cleanData();
+      searchBox.value = '';
       Notiflix.Notify.failure('Oops, there is no country with that name');
     });
 }
 function cleanData() {
-  searchBox.value = '';
   countryInfo.innerHTML = '';
   countryList.innerHTML = '';
 }
@@ -38,6 +38,7 @@ function makeResponseRequest(data) {
   } else if (amount >= 2 && amount <= 10) {
     renderCountryList(data);
   } else {
+    cleanData();
     Notiflix.Notify.info(
       'Too many matches found. Please enter a more specific name.'
     );
@@ -94,4 +95,3 @@ function renderCountryInfo(names) {
   countryInfo.innerHTML = markup;
   // console.log(markup);
 }
-
